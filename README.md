@@ -22,7 +22,11 @@ npm run build      # what Vercel runs
 
 ## Deploy
 
-The folder is linked to the Vercel project `tqhuyen`.
+Pushing to `master` on GitHub deploys to https://tqhuyen.vercel.app automatically
+(Vercel project `tqhuyen`, connected to this repo). Pushes to other branches get
+a preview URL instead.
+
+To deploy straight from this folder without pushing:
 
 ```bash
 vercel deploy --prod
