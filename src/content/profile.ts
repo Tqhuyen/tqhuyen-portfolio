@@ -375,11 +375,16 @@ export const awards: AwardYear[] = [
       "Outstanding Student in Academics and Activities, Faculty of Electronics & Telecommunications",
       "Faculty commendation for contributions to the Faculty of Electronics & Telecommunications",
       "Excellent Student of the academic year",
+      "PIONEER Student Research Club certificate for strong competition results",
     ],
   },
   {
     year: 2022,
-    items: ["Second Prize, ETE Code Contest", "Semi-finalist, AWS Build On Vietnam 2022"],
+    items: [
+      "Second Prize, ETE Code Contest",
+      "Semi-finalist, AWS Build On Vietnam 2022",
+      "Certificate for the Faculty of Electronics & Telecommunications booth at BK Techshow 2022",
+    ],
   },
   { year: 2021, items: ["Excellent Student of the academic year"] },
   {
