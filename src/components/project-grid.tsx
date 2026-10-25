@@ -3,16 +3,10 @@
 import { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 
-import type { Project, ProjectKind } from "@/content/profile";
+import type { Project } from "@/content/profile";
 
 const FILTERS = ["All", "Research", "Industry", "Personal"] as const;
 type Filter = (typeof FILTERS)[number];
-
-const KIND_LABEL: Record<ProjectKind, string> = {
-  Research: "Research",
-  Industry: "Hekate",
-  Personal: "Personal",
-};
 
 export function ProjectGrid({ projects }: { projects: Project[] }) {
   const [filter, setFilter] = useState<Filter>("All");
@@ -32,7 +26,7 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
         {shown.map((p) => (
           <li key={p.title} className="card project">
             <div className="project-meta">
-              <span className={`kind kind-${p.kind.toLowerCase()}`}>{KIND_LABEL[p.kind]}</span>
+              <span className={`kind kind-${p.kind.toLowerCase()}`}>{p.org ?? p.kind}</span>
               {p.period ? <span>{p.period}</span> : null}
             </div>
             <h3>{p.title}</h3>

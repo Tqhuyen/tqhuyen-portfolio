@@ -69,9 +69,9 @@ function PaperRow({ paper }: { paper: Publication }) {
 export default function Home() {
   const awardCount = awards.reduce((n, year) => n + year.items.length, 0);
   const stats = [
-    { value: "3 yrs", label: "AI engineering at Hekate" },
+    { value: "4+ yrs", label: "industry AI experience at Everfit and Hekate" },
     { value: String(publications.length), label: "first-author IEEE papers in 2025" },
-    { value: "3.53", label: "GPA out of 4.0, top 5% of the class" },
+    { value: "3.7", label: "M.Sc. GPA out of 4.0, Distinction" },
     { value: String(awardCount), label: `awards and honours since ${awards[awards.length - 1].year}` },
   ];
 
@@ -209,7 +209,7 @@ export default function Home() {
           id="projects"
           index="03"
           title="Projects"
-          intro="Research, client work at Hekate, and things I built on my own. Linked ones have public code or a live demo."
+          intro="Research, product work at Everfit and Hekate, and things I built on my own. Linked ones have public code or a live demo."
         >
           <ProjectGrid projects={projects} />
         </Section>

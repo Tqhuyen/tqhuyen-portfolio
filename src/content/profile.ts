@@ -1,28 +1,29 @@
 /**
  * Everything the site says about Huyên lives here.
  *
- * Sources: the CVs in Documents/Career/CV/CV (PhD, Industry, master, AI
- * Engineer, Academic), the certificates in Documents/Personal/hồ sơ thành
- * tích, and the IEEE records of both papers. Deliberately left out: phone
- * number, date of birth, ID card, transcripts and certificate scans.
+ * Sources: the newest CV (Everfit, M.Sc. by Research, Oct 2026) first, then
+ * the older CVs in Documents/Career/CV/CV, the certificates in
+ * Documents/Personal/hồ sơ thành tích, and the IEEE records of both papers.
+ * Deliberately left out: phone number, date of birth, ID card, transcripts
+ * and certificate scans.
  */
 
 export type Link = { label: string; href: string };
 
 export const profile = {
   name: "Trần Quang Huyên",
-  role: "AI Engineer & Researcher",
+  role: "AI Research Scientist & AI Engineer",
   location: "Da Nang, Vietnam",
   summary:
-    "AI engineer with three years of shipping computer vision, NLP and LLM systems at Hekate, an AI-for-good startup. First author of two 2025 IEEE papers, on quantum self-attention for Vision Transformers and on brain tumor segmentation. I build AI for healthcare and education, and I keep a soft spot for quantum computing and physics.",
+    "I bridge machine learning research and production systems. M.Sc. by Research (Distinction, thesis defended) with first-author IEEE papers in quantum ML and medical imaging, and 4+ years in industry at Everfit and Hekate: R&D, GenAI and computer vision architectures, and complex models turned into low-latency, cost-effective products for enterprise and healthcare.",
   email: "huyenquangtran2002@gmail.com",
   interests: [
-    "Medical image analysis",
     "Quantum machine learning",
-    "Computer vision",
-    "Large language models",
+    "Medical image analysis",
+    "LLM and RAG systems",
+    "Vision-language models",
+    "Voice AI",
     "AI for healthcare",
-    "Robotics",
   ],
   links: [
     { label: "GitHub", href: "https://github.com/Tqhuyen" },
@@ -44,12 +45,23 @@ export type Experience = {
 
 export const experience: Experience[] = [
   {
-    role: "Research Intern",
+    role: "AI Engineer",
+    org: "Everfit",
+    period: "Sep 2025 – Sep 2026",
+    points: [
+      "AI Profile Builder & AI Interviewer: led end-to-end development of AI-generated seller profiles, from prompt engineering and internal tooling to the voice-interviewer API; ran field-level evaluations, optimised Instagram crawling and fixed critical pre-launch issues for seller onboarding.",
+      "AI Nutrition & Food Recognition: built evaluation and improvement pipelines for production AI, with analytics dashboards, synonym-to-canonical mapping and a multi-tier nutrition cascade; benchmarked 39 VLM configurations, designed the Gold-300 dataset, optimised a compact scan-type classifier and routed A/B tests with Statsig.",
+      "Wake word & Voice2JSON: led R&D and the end-to-end PoC for hands-free, voice-to-JSON workout logging, with a custom wake-word pipeline, under 2 s latency at about $0.00036 per request, API migration, conversational logging and the iOS handover.",
+    ],
+    tags: ["LLMs", "VLMs", "Voice AI", "Evaluation", "A/B testing"],
+  },
+  {
+    role: "Research Student",
     org: "CIS Lab, National Chung Cheng University",
     place: "Chiayi, Taiwan",
     period: "Dec 2024 – Mar 2025",
     points: [
-      "Studied quantum machine learning under Prof. Van-Linh Nguyen and implemented classifiers in Python and PennyLane.",
+      "Researched quantum machine learning and quantum self-attention under Prof. Van-Linh Nguyen, implementing classifiers in Python and PennyLane.",
       "Designed efficient circuit classifiers for quantum self-attention in Vision Transformers, published as a first-author paper at IEEE Globecom Workshops 2025.",
       "Completed the 2025 International Intern Research Program with an “Excellent” rating.",
     ],
@@ -60,14 +72,13 @@ export const experience: Experience[] = [
     org: "Hekate",
     period: "Nov 2021 – Dec 2024",
     points: [
-      "Researched and shipped computer vision, NLP, GenAI and LLM systems for clients (GPT, Llama, Qwen, Claude), served as APIs on AWS.",
-      "Led a team of 5 engineers on an ad-violation detector for Alive & Thrive (UNICEF) covering Lao and Mongolian: 93% accuracy, 30% less processing time.",
-      "Designed, trained and deployed cerebral artery segmentation and cerebrovascular disease prediction models in PyTorch (85% accuracy).",
-      "Built MedNow, a medical chatbot on SOLAR with RAG over ChromaDB; RAG raised answer accuracy by 20%.",
-      "Set up an MLOps workflow (MLflow, RabbitMQ, Kafka, CI/CD, test-driven development) that made model deployment 40% faster.",
-      "Maintained an LLM chatbot product and raised user engagement by 30%.",
+      "R&D on computer vision, NLP, GenAI and LLMs (GPT, Llama, Qwen, Claude) to customer requirements.",
+      "Cerebral artery disease classification: designed, trained and deployed cerebral artery segmentation and disease prediction models in PyTorch (85% accuracy).",
+      "MedNow: built a medical chatbot on SOLAR with RAG over ChromaDB; RAG raised answer accuracy by 20%.",
+      "Milk-advertisement violation detection: led a team of 5 engineers covering Lao and Mongolian, reaching 93% accuracy and cutting processing time by 30%.",
+      "Sumi: maintained and optimised an LLM chatbot, raising user engagement by 30%.",
     ],
-    tags: ["PyTorch", "TensorFlow", "LLMs", "AWS", "MLOps"],
+    tags: ["PyTorch", "TensorFlow", "LLMs", "RAG", "AWS"],
   },
 ];
 
@@ -80,19 +91,25 @@ export type Education = {
 
 export const education: Education[] = [
   {
-    degree: "M.Sc. in Electronics Engineering (in progress)",
+    degree: "M.Sc. (by Research) in Electronics Engineering",
     school: "University of Science and Technology – The University of Da Nang",
-    period: "2025 – present",
-    points: ["Thesis: 3D CNN for glaucoma detection from OCT scans."],
+    period: "2025 – Mar 2027 (expected)",
+    points: [
+      "GPA 3.7 / 4.0 (Distinction).",
+      "Thesis: A Deep Learning Model for Glaucoma Classification Using Optical Coherence Tomography Images of the Retinal Nerve Fiber Layer.",
+      "Supervisor: Prof. Dr. Phan Tran Dang Khoa.",
+      "Research and thesis defense completed; awaiting degree conferral.",
+    ],
   },
   {
-    degree: "Engineer's degree in Computer Engineering",
+    degree: "Bachelor of Engineering in Computer Engineering",
     school: "University of Science and Technology – The University of Da Nang",
     period: "2020 – 2025",
     points: [
-      "GPA 3.53 / 4.0, top 5% of the class.",
+      "GPA 3.58 / 4.0, 2nd in the major.",
       "180 credits, Vietnam Qualifications Framework level 7 (master's-equivalent).",
-      "Capstone: improving quantum self-attention for quantum classifiers.",
+      "Projects: Quantum Self-Attention; replicating the Transformer model.",
+      "Coursework: machine learning, computer vision, data structures and algorithms, electronic circuits, digital logic design, probability and statistics, linear algebra.",
     ],
   },
 ];
@@ -110,7 +127,7 @@ export const publications: Publication[] = [
   {
     title: "Efficient Circuit Classifier Design for Enhancing Quantum Self-Attention in Vision Transformers",
     authors: "Huyen Quang Tran, Yu-Han Lin, Hanh Thi Minh Tran, Duy-Tuan Dao, Van-Linh Nguyen",
-    venue: "IEEE Globecom Workshops (GC Wkshps), Taipei, Taiwan",
+    venue: "IEEE Globecom Workshops (GC Wkshps), Taipei, Taiwan, pp. 170–175",
     year: 2025,
     links: [
       { label: "Paper", href: "https://ieeexplore.ieee.org/document/11591004" },
@@ -135,34 +152,34 @@ export const publications: Publication[] = [
 /** Student research conference papers (University of Science and Technology). */
 export const studentResearch: Publication[] = [
   {
-    title: "Research and implement some Quantum Machine Learning algorithms",
+    title: "Research and Enhancement of the Quantum Self-Attention Model",
     authors: "Huyen Quang Tran (sole author)",
     venue: "Faculty-level Student Scientific Research Conference",
     year: 2025,
-    note: "Third Prize",
+    note: "Third Prize (faculty)",
     links: [],
   },
   {
-    title: "Chatbot based on LLMs and RAG with the university's dataset",
+    title: "Student Support Chatbot for the University of Science and Technology",
     authors: "Huyen Quang Tran (sole author)",
     venue: "Faculty-level Student Scientific Research Conference",
-    year: 2024,
-    note: "Second Prize",
+    year: 2023,
+    note: "Second Prize (faculty)",
     links: [],
   },
   {
-    title: "Gait recognition with the GaitBase model",
+    title: "Research on the GaitBase Model Applied to Gait-Based Identity Recognition",
     authors: "Huyen Quang Tran, Van Phuc Thai · advisor Dr. Hanh Thi Minh Tran",
     venue: "Student Scientific Research Conference",
-    year: 2023,
+    year: 2022,
     note: "First Prize (faculty), Encouragement Prize (university)",
     links: [],
   },
   {
-    title: "Shoplifting detection in stores with computer vision",
+    title: "Shoplifting Detection in Retail Stores Using Computer Vision",
     authors: "Hai Ton That, Huyen Quang Tran, Loc Hoang Ngoc, Tam Nguyen Tue · advisor Dr. Hanh Thi Minh Tran",
     venue: "Student Scientific Research Conference",
-    year: 2023,
+    year: 2022,
     links: [],
   },
 ];
@@ -172,6 +189,8 @@ export type ProjectKind = "Research" | "Industry" | "Personal";
 export type Project = {
   title: string;
   kind: ProjectKind;
+  /** Company shown on industry cards. */
+  org?: string;
   /** Omitted when the CVs give no dates. */
   period?: string;
   summary: string;
@@ -211,26 +230,27 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "Glaucoma detection from OCT",
+    title: "Glaucoma classification from OCT",
     kind: "Research",
-    period: "2025 – present",
+    period: "2025 – 2026",
     summary:
-      "Master's thesis: a 3D CNN on raw 200³ OCT volumes, trained by one PyTorch pipeline that runs unchanged from Colab to a multi-node SLURM cluster.",
+      "Master's thesis: a deep learning model that classifies glaucoma from OCT images of the retinal nerve fiber layer, with a 3D CNN on raw 200³ volumes trained by one PyTorch pipeline from Colab to a multi-node SLURM cluster.",
+    highlight: "M.Sc. thesis · defended",
     tags: ["3D CNN", "PyTorch DDP", "SLURM"],
     links: [{ label: "Code", href: "https://github.com/Tqhuyen/glaucoma-thesis" }],
   },
   {
-    title: "Gait recognition system",
+    title: "Gait-based identity recognition",
     kind: "Research",
-    period: "Jan – Jun 2023",
+    period: "2022 – 2023",
     summary:
       "Identifies people by the way they walk using the GaitBase model, wrapped in a Flask web app. Built with a teammate; I also presented the papers we built on.",
-    highlight: "First Prize, faculty research conference",
+    highlight: "First Prize (faculty) · Encouragement Prize (university)",
     tags: ["GaitBase", "Computer vision", "Flask"],
     links: [],
   },
   {
-    title: "University chatbot with LLMs and RAG",
+    title: "Student support chatbot",
     kind: "Research",
     period: "Sep – Dec 2023",
     summary:
@@ -240,7 +260,7 @@ export const projects: Project[] = [
     links: [],
   },
   {
-    title: "Shoplifting detection",
+    title: "Shoplifting detection in retail stores",
     kind: "Research",
     period: "2022 – 2023",
     summary: "Computer vision that spots shoplifting in store camera footage; a four-person student research project.",
@@ -248,8 +268,42 @@ export const projects: Project[] = [
     links: [],
   },
   {
+    title: "AI Profile Builder & AI Interviewer",
+    kind: "Industry",
+    org: "Everfit",
+    period: "2025 – 2026",
+    summary:
+      "AI-generated seller profiles for onboarding: prompt engineering, internal tooling and a voice-interviewer API, checked by field-level evaluations and fed by an optimised Instagram crawler.",
+    highlight: "Led end to end, through launch",
+    tags: ["LLMs", "Prompt engineering", "Voice AI", "Crawling"],
+    links: [],
+  },
+  {
+    title: "AI Nutrition & Food Recognition",
+    kind: "Industry",
+    org: "Everfit",
+    period: "2025 – 2026",
+    summary:
+      "Evaluation and improvement pipelines for production food recognition: analytics dashboards, synonym-to-canonical mapping, a multi-tier nutrition cascade, a compact scan-type classifier and Statsig A/B routing.",
+    highlight: "39 VLM configs benchmarked · Gold-300 dataset",
+    tags: ["VLMs", "Evaluation", "A/B testing", "Dashboards"],
+    links: [],
+  },
+  {
+    title: "Wake word & Voice2JSON",
+    kind: "Industry",
+    org: "Everfit",
+    period: "2025 – 2026",
+    summary:
+      "Hands-free workout logging: a custom wake-word pipeline and a voice-to-JSON model, taken from R&D to an end-to-end PoC handed over to iOS.",
+    highlight: "< 2 s latency · ~$0.00036 per request",
+    tags: ["Wake word", "Speech", "iOS", "APIs"],
+    links: [],
+  },
+  {
     title: "Alive & Thrive (UNICEF) ad-violation assistant",
     kind: "Industry",
+    org: "Hekate",
     summary:
       "Finds milk ads that break the marketing rules for products for pregnant women and children under 24 months, across Facebook, Instagram and websites, in 5 countries.",
     highlight: "Led 5 engineers · 93% accuracy",
@@ -259,6 +313,7 @@ export const projects: Project[] = [
   {
     title: "Cerebrovascular disease recognition",
     kind: "Industry",
+    org: "Hekate",
     period: "Jan 2022 – Feb 2023",
     summary:
       "3D segmentation of cerebral arteries with nnU-Net plus a disease classifier, trained on imbalanced medical scans and delivered as a web platform.",
@@ -269,6 +324,7 @@ export const projects: Project[] = [
   {
     title: "MedNow medical chatbot",
     kind: "Industry",
+    org: "Hekate",
     period: "2024",
     summary:
       "Gives medical guidance with the SOLAR LLM and RAG over WHO documents, and reads uploaded prescriptions with OCR.",
@@ -279,6 +335,7 @@ export const projects: Project[] = [
   {
     title: "Virtual expert",
     kind: "Industry",
+    org: "Hekate",
     period: "Apr – May 2023",
     summary: "A fine-tuned LLM with embedding search that answers questions about a user's specialised documents in real time.",
     tags: ["LLM fine-tuning", "Embeddings"],
@@ -287,6 +344,7 @@ export const projects: Project[] = [
   {
     title: "Virtual Friend VR game",
     kind: "Industry",
+    org: "Hekate",
     period: "Nov 2021 – Feb 2022",
     summary: "A virtual-reality companion for Oculus Quest 2, built in Unity with the XR toolkit and pre-trained NLP models.",
     tags: ["Unity", "Oculus", "NLP"],
@@ -449,36 +507,27 @@ export const leadership: Role[] = [
 
 export const certifications: string[] = [
   "TOEIC 880",
-  "AI for Medical Diagnosis (DeepLearning.AI, Coursera)",
-  "Custom Models, Layers, and Loss Functions with TensorFlow (Coursera)",
-  "Introduction to TensorFlow for AI, ML and Deep Learning (Coursera)",
-  "Python for Data Science, AI & Development (Coursera)",
-  "AWS Fundamentals: Building Serverless Applications (AWS)",
-  "MongoDB Basics (MongoDB University)",
-  "Data Science Summer School (VIASM)",
+  "AI for Medical Diagnosis (DeepLearning.AI)",
+  "Custom Models, Layers, and Loss Functions with TensorFlow",
+  "Python for Data Science",
+  "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning",
 ];
 
 export type SkillGroup = { title: string; items: string[] };
 
 export const skills: SkillGroup[] = [
   {
-    title: "AI & research",
-    items: ["PyTorch", "TensorFlow", "PennyLane", "nnU-Net", "YOLO", "OCR", "LangChain", "RAG", "ChromaDB", "NumPy", "Pandas", "LaTeX"],
+    title: "AI & machine learning",
+    items: ["PyTorch", "TensorFlow", "Hugging Face Transformers", "LangChain", "LlamaIndex", "OpenCV", "vLLM"],
   },
   {
-    title: "MLOps & backend",
-    items: ["Docker", "MLflow", "Kafka", "RabbitMQ", "Jenkins", "FastAPI", "Flask", "Nginx", "Git", "CI/CD"],
+    title: "Research domains",
+    items: ["Quantum machine learning", "Medical image analysis", "LLM RAG architectures"],
   },
+  { title: "Programming", items: ["Python (expert)", "C++", "SQL", "JavaScript"] },
   {
-    title: "Cloud & data",
-    items: ["AWS", "Google Cloud", "MongoDB", "PostgreSQL", "SQL Server", "Redis", "Ubuntu", "Windows Server"],
+    title: "MLOps & cloud",
+    items: ["AWS", "GCP", "Docker", "Kubernetes", "MLflow", "Weights & Biases", "CI/CD (Jenkins, GitLab)"],
   },
-  {
-    title: "Languages & web",
-    items: ["Python", "C / C++", "JavaScript", "TypeScript", "C#", "Dart", "PHP", "React", "Next.js", "Node.js"],
-  },
-  {
-    title: "Hardware",
-    items: ["Arduino", "STM32", "ESP32", "Raspberry Pi", "MSP430", "FPGA / Verilog", "Altium Designer", "Proteus"],
-  },
+  { title: "Data & backend", items: ["PostgreSQL", "MongoDB", "Redis", "FastAPI", "Apache Kafka"] },
 ];

@@ -26,7 +26,7 @@ export default function OpenGraphImage() {
       <div style={{ marginTop: 24, fontSize: 88, fontWeight: 700, letterSpacing: "-0.03em" }}>Tran Quang Huyen</div>
       <div style={{ marginTop: 20, fontSize: 40, color: "#22c55e" }}>{profile.role}</div>
       <div style={{ marginTop: 36, fontSize: 30, color: "#cbd5e1", maxWidth: 980 }}>
-        {`Computer vision, medical imaging, LLM systems and quantum ML · ${publications.length} first-author IEEE papers`}
+        {`GenAI, computer vision and voice AI in production · quantum ML and medical imaging research · ${publications.length} first-author IEEE papers`}
       </div>
     </div>,
     size,

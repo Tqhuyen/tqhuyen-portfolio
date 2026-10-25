@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(productionHost ? `https://${productionHost}` : "http://localhost:3000"),
   title: `${profile.name} · ${profile.role}`,
   description:
-    "AI engineer and researcher from Vietnam: computer vision, medical imaging, LLM systems and quantum machine learning. Projects, publications and awards.",
+    "AI research scientist and engineer from Vietnam: GenAI, computer vision and voice AI in production, quantum ML and medical imaging research. Projects, publications and awards.",
   openGraph: { type: "website", title: `${profile.name} · ${profile.role}` },
 };
 
