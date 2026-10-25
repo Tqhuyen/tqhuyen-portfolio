@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 import { ArrowUpRight, Mail, MapPin } from "lucide-react";
 
 import { ProjectGrid } from "@/components/project-grid";
@@ -44,24 +44,35 @@ function Section({ id, index, title, intro, children }: { id: string; index: str
 }
 
 function PaperRow({ paper }: { paper: Publication }) {
-  const [before, after] = paper.authors.split(AUTHOR_NAME);
+  // Names never break mid-name ("Van-/Linh"); the line wraps between authors.
+  const [names, ...notes] = paper.authors.split(" · ");
   return (
     <>
       <h3>{paper.title}</h3>
       <p className="authors">
-        {after === undefined ? (
-          paper.authors
-        ) : (
-          <>
-            {before}
-            <strong>{AUTHOR_NAME}</strong>
-            {after}
-          </>
-        )}
+        {names.split(", ").map((name, i) => (
+          <Fragment key={name}>
+            {i > 0 ? ", " : null}
+            <span className="nowrap">
+              {name.startsWith(AUTHOR_NAME) ? (
+                <>
+                  <strong>{AUTHOR_NAME}</strong>
+                  {name.slice(AUTHOR_NAME.length)}
+                </>
+              ) : (
+                name
+              )}
+            </span>
+          </Fragment>
+        ))}
+        {notes.map((note) => (
+          <Fragment key={note}>
+            {" · "}
+            <span className="nowrap">{note}</span>
+          </Fragment>
+        ))}
       </p>
-      <p className="venue">
-        {paper.venue} · {paper.year}
-      </p>
+      <p className="venue">{`${paper.venue}\u00a0·\u00a0${paper.year}`}</p>
     </>
   );
 }
@@ -71,8 +82,8 @@ export default function Home() {
   const stats = [
     { value: "4+ yrs", label: "industry AI experience at Everfit and Hekate" },
     { value: String(publications.length), label: "first-author IEEE papers in 2025" },
-    { value: "3.7", label: "M.Sc. GPA out of 4.0, Distinction" },
-    { value: String(awardCount), label: `awards and honours since ${awards[awards.length - 1].year}` },
+    { value: "3.7", label: "MSc GPA out of 4.0, Distinction" },
+    { value: String(awardCount), label: `awards and honors since ${awards[awards.length - 1].year}` },
   ];
 
   return (
@@ -231,7 +242,7 @@ export default function Home() {
           </ul>
         </Section>
 
-        <Section id="awards" index="05" title="Awards & honours">
+        <Section id="awards" index="05" title="Awards & honors">
           <ol className="years">
             {awards.map((y) => (
               <li key={y.year}>

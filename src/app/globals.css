@@ -67,6 +67,22 @@ ol {
   margin: 0;
 }
 
+/* No one-word last lines in titles; prose avoids orphans where supported. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
 ul,
 ol {
   padding: 0;
@@ -116,14 +132,15 @@ a {
   top: 12px;
 }
 
+/* Mono is for short "system" text: dates, labels, badges. Titles and
+   longer metadata (venues) use the sans so they stay easy to read. */
 .eyebrow,
 .period,
 .stat-label,
 .badge,
 .kind,
 .year,
-.prize,
-.venue {
+.prize {
   font-family: var(--font-mono), monospace;
 }
 
@@ -216,8 +233,9 @@ a {
   padding: 24px;
 }
 
-.card h3 {
-  font: 600 18px/1.35 var(--font-mono), monospace;
+.card h3,
+.student-research h3 {
+  font: 600 18px/1.35 var(--font-sans), sans-serif;
   letter-spacing: -0.01em;
 }
 
@@ -522,7 +540,7 @@ a {
 .venue {
   margin-top: 6px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .student-research {
@@ -541,7 +559,7 @@ a {
 }
 
 .student-research h3 {
-  font: 600 16px/1.4 var(--font-sans), sans-serif;
+  font-size: 16px;
 }
 
 .prize {

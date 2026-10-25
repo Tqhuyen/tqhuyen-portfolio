@@ -15,7 +15,7 @@ export const profile = {
   role: "AI Research Scientist & AI Engineer",
   location: "Da Nang, Vietnam",
   summary:
-    "I bridge machine learning research and production systems. M.Sc. by Research (Distinction, thesis defended) with first-author IEEE papers in quantum ML and medical imaging, and 4+ years in industry at Everfit and Hekate: R&D, GenAI and computer vision architectures, and complex models turned into low-latency, cost-effective products for enterprise and healthcare.",
+    "I bridge machine learning research and production systems. I completed an MSc by Research (Distinction, thesis defended) with first-author IEEE papers in quantum ML and medical imaging, and I have spent 4+ years in industry at Everfit and Hekate on R&D and GenAI and computer vision architectures, turning complex models into low-latency, cost-effective products for enterprise and healthcare.",
   email: "huyenquangtran2002@gmail.com",
   interests: [
     "Quantum machine learning",
@@ -49,9 +49,9 @@ export const experience: Experience[] = [
     org: "Everfit",
     period: "Sep 2025 – Sep 2026",
     points: [
-      "AI Profile Builder & AI Interviewer: led end-to-end development of AI-generated seller profiles, from prompt engineering and internal tooling to the voice-interviewer API; ran field-level evaluations, optimised Instagram crawling and fixed critical pre-launch issues for seller onboarding.",
-      "AI Nutrition & Food Recognition: built evaluation and improvement pipelines for production AI, with analytics dashboards, synonym-to-canonical mapping and a multi-tier nutrition cascade; benchmarked 39 VLM configurations, designed the Gold-300 dataset, optimised a compact scan-type classifier and routed A/B tests with Statsig.",
-      "Wake word & Voice2JSON: led R&D and the end-to-end PoC for hands-free, voice-to-JSON workout logging, with a custom wake-word pipeline, under 2 s latency at about $0.00036 per request, API migration, conversational logging and the iOS handover.",
+      "AI profile builder & AI interviewer: led end-to-end development of AI-generated seller profiles, from prompt engineering and internal tooling to the voice-interviewer API; ran field-level evaluations, optimized Instagram crawling and fixed critical pre-launch issues for seller onboarding.",
+      "AI nutrition & food recognition: built evaluation and improvement pipelines for production AI, with analytics dashboards, synonym-to-canonical mapping and a multi-tier nutrition cascade; benchmarked 39 VLM configurations, designed the Gold-300 dataset, optimized a compact scan-type classifier and routed A/B tests with Statsig.",
+      "Custom wake-word detection & Voice2JSON: led R&D and the end-to-end PoC for hands-free, voice-to-JSON workout logging, with a custom wake-word pipeline, under 2 s latency at about $0.00036 per request, API migration, conversational logging and the iOS handover.",
     ],
     tags: ["LLMs", "VLMs", "Voice AI", "Evaluation", "A/B testing"],
   },
@@ -75,8 +75,8 @@ export const experience: Experience[] = [
       "R&D on computer vision, NLP, GenAI and LLMs (GPT, Llama, Qwen, Claude) to customer requirements.",
       "Cerebral artery disease classification: designed, trained and deployed cerebral artery segmentation and disease prediction models in PyTorch (85% accuracy).",
       "MedNow: built a medical chatbot on SOLAR with RAG over ChromaDB; RAG raised answer accuracy by 20%.",
-      "Milk-advertisement violation detection: led a team of 5 engineers covering Lao and Mongolian, reaching 93% accuracy and cutting processing time by 30%.",
-      "Sumi: maintained and optimised an LLM chatbot, raising user engagement by 30%.",
+      "Milk advertisement violation detection (Alive & Thrive, UNICEF): led a team of 5 engineers covering Lao and Mongolian, reaching 93% accuracy and cutting processing time by 30%.",
+      "Sumi: maintained and optimized an LLM chatbot, raising user engagement by 30%.",
     ],
     tags: ["PyTorch", "TensorFlow", "LLMs", "RAG", "AWS"],
   },
@@ -91,23 +91,23 @@ export type Education = {
 
 export const education: Education[] = [
   {
-    degree: "M.Sc. (by Research) in Electronics Engineering",
-    school: "University of Science and Technology – The University of Da Nang",
+    degree: "Master of Science (by Research) in Electronics Engineering",
+    school: "The University of Danang – University of Science and Technology",
     period: "2025 – Mar 2027 (expected)",
     points: [
       "GPA 3.7 / 4.0 (Distinction).",
       "Thesis: A Deep Learning Model for Glaucoma Classification Using Optical Coherence Tomography Images of the Retinal Nerve Fiber Layer.",
-      "Supervisor: Prof. Dr. Phan Tran Dang Khoa.",
+      "Supervisor: Prof. Tran Dang Khoa Phan.",
       "Research and thesis defense completed; awaiting degree conferral.",
     ],
   },
   {
     degree: "Bachelor of Engineering in Computer Engineering",
-    school: "University of Science and Technology – The University of Da Nang",
+    school: "The University of Danang – University of Science and Technology",
     period: "2020 – 2025",
     points: [
       "GPA 3.58 / 4.0, 2nd in the major.",
-      "180 credits, Vietnam Qualifications Framework level 7 (master's-equivalent).",
+      "180 credits, Vietnam Qualifications Framework level 7 (master’s-equivalent).",
       "Projects: Quantum Self-Attention; replicating the Transformer model.",
       "Coursework: machine learning, computer vision, data structures and algorithms, electronic circuits, digital logic design, probability and statistics, linear algebra.",
     ],
@@ -169,15 +169,15 @@ export const studentResearch: Publication[] = [
   },
   {
     title: "Research on the GaitBase Model Applied to Gait-Based Identity Recognition",
-    authors: "Huyen Quang Tran, Van Phuc Thai · advisor Dr. Hanh Thi Minh Tran",
+    authors: "Huyen Quang Tran, Phuc Van Thai · advisor Dr. Hanh Thi Minh Tran",
     venue: "Student Scientific Research Conference",
     year: 2022,
-    note: "First Prize (faculty), Encouragement Prize (university)",
+    note: "First Prize (faculty) · Encouragement Prize (university)",
     links: [],
   },
   {
     title: "Shoplifting Detection in Retail Stores Using Computer Vision",
-    authors: "Hai Ton That, Huyen Quang Tran, Loc Hoang Ngoc, Tam Nguyen Tue · advisor Dr. Hanh Thi Minh Tran",
+    authors: "Hai Ton That, Huyen Quang Tran, Loc Ngoc Hoang, Tam Tue Nguyen · advisor Dr. Hanh Thi Minh Tran",
     venue: "Student Scientific Research Conference",
     year: 2022,
     links: [],
@@ -234,8 +234,8 @@ export const projects: Project[] = [
     kind: "Research",
     period: "2025 – 2026",
     summary:
-      "Master's thesis: a deep learning model that classifies glaucoma from OCT images of the retinal nerve fiber layer, with a 3D CNN on raw 200³ volumes trained by one PyTorch pipeline from Colab to a multi-node SLURM cluster.",
-    highlight: "M.Sc. thesis · defended",
+      "Master’s thesis: a deep learning model that classifies glaucoma from OCT images of the retinal nerve fiber layer, with a 3D CNN on raw 200³ volumes trained by one PyTorch pipeline from Colab to a multi-node SLURM cluster.",
+    highlight: "MSc thesis · defended",
     tags: ["3D CNN", "PyTorch DDP", "SLURM"],
     links: [{ label: "Code", href: "https://github.com/Tqhuyen/glaucoma-thesis" }],
   },
@@ -254,8 +254,8 @@ export const projects: Project[] = [
     kind: "Research",
     period: "Sep – Dec 2023",
     summary:
-      "Answers students' questions from the university's own documents through a ChromaDB vector store, after comparing GPT-3, GPT-4, T5, Phi and BLOOM.",
-    highlight: "Second Prize, faculty research conference",
+      "Answers students’ questions from the university’s own documents through a ChromaDB vector store, after comparing GPT-3, GPT-4, T5, Phi and BLOOM.",
+    highlight: "Second Prize (faculty)",
     tags: ["RAG", "ChromaDB", "LLMs"],
     links: [],
   },
@@ -268,29 +268,29 @@ export const projects: Project[] = [
     links: [],
   },
   {
-    title: "AI Profile Builder & AI Interviewer",
+    title: "AI profile builder & AI interviewer",
     kind: "Industry",
     org: "Everfit",
     period: "2025 – 2026",
     summary:
-      "AI-generated seller profiles for onboarding: prompt engineering, internal tooling and a voice-interviewer API, checked by field-level evaluations and fed by an optimised Instagram crawler.",
-    highlight: "Led end to end, through launch",
+      "AI-generated seller profiles for onboarding: prompt engineering, internal tooling and a voice-interviewer API, checked by field-level evaluations and fed by an optimized Instagram crawler.",
+    highlight: "End-to-end lead, through launch",
     tags: ["LLMs", "Prompt engineering", "Voice AI", "Crawling"],
     links: [],
   },
   {
-    title: "AI Nutrition & Food Recognition",
+    title: "AI nutrition & food recognition",
     kind: "Industry",
     org: "Everfit",
     period: "2025 – 2026",
     summary:
       "Evaluation and improvement pipelines for production food recognition: analytics dashboards, synonym-to-canonical mapping, a multi-tier nutrition cascade, a compact scan-type classifier and Statsig A/B routing.",
-    highlight: "39 VLM configs benchmarked · Gold-300 dataset",
+    highlight: "39 VLM configurations benchmarked · Gold-300 dataset",
     tags: ["VLMs", "Evaluation", "A/B testing", "Dashboards"],
     links: [],
   },
   {
-    title: "Wake word & Voice2JSON",
+    title: "Custom wake-word detection & Voice2JSON",
     kind: "Industry",
     org: "Everfit",
     period: "2025 – 2026",
@@ -301,7 +301,7 @@ export const projects: Project[] = [
     links: [],
   },
   {
-    title: "Alive & Thrive (UNICEF) ad-violation assistant",
+    title: "Milk advertisement violation detection (Alive & Thrive, UNICEF)",
     kind: "Industry",
     org: "Hekate",
     summary:
@@ -311,7 +311,7 @@ export const projects: Project[] = [
     links: [],
   },
   {
-    title: "Cerebrovascular disease recognition",
+    title: "Cerebral artery disease classification",
     kind: "Industry",
     org: "Hekate",
     period: "Jan 2022 – Feb 2023",
@@ -337,7 +337,7 @@ export const projects: Project[] = [
     kind: "Industry",
     org: "Hekate",
     period: "Apr – May 2023",
-    summary: "A fine-tuned LLM with embedding search that answers questions about a user's specialised documents in real time.",
+    summary: "A fine-tuned LLM with embedding search that answers questions about a user’s specialized documents in real time.",
     tags: ["LLM fine-tuning", "Embeddings"],
     links: [],
   },
@@ -421,17 +421,17 @@ export const awards: AwardYear[] = [
     year: 2024,
     items: [
       "Second Prize, Faculty-level Student Scientific Research Conference",
-      "Outstanding Student in Academics and Activities, Faculty of Electronics & Telecommunications",
+      "Outstanding Student in Academics and Activities, Faculty of Electronics and Telecommunication Engineering",
     ],
   },
   {
     year: 2023,
     items: [
-      "First Prize, FISICO 2023: CYBERA, physics competition for university students",
+      "First Prize, Fisico 2023: CYBERA, physics competition for university students",
       "First Prize, Faculty-level Student Scientific Research Conference",
       "Encouragement Prize, University-level Student Scientific Research Conference",
-      "Outstanding Student in Academics and Activities, Faculty of Electronics & Telecommunications",
-      "Faculty commendation for contributions to the Faculty of Electronics & Telecommunications",
+      "Outstanding Student in Academics and Activities, Faculty of Electronics and Telecommunication Engineering",
+      "Faculty commendation for contributions to the Faculty of Electronics and Telecommunication Engineering",
       "Excellent Student of the academic year",
       "PIONEER Student Research Club certificate for strong competition results",
     ],
@@ -441,7 +441,7 @@ export const awards: AwardYear[] = [
     items: [
       "Second Prize, ETE Code Contest",
       "Semi-finalist, AWS Build On Vietnam 2022",
-      "Certificate for the Faculty of Electronics & Telecommunications booth at BK Techshow 2022",
+      "Certificate for the Faculty of Electronics and Telecommunication Engineering booth at BK Techshow 2022",
     ],
   },
   { year: 2021, items: ["Excellent Student of the academic year"] },
@@ -468,25 +468,25 @@ export type Role = { title: string; org: string; period: string; detail: string 
 
 export const leadership: Role[] = [
   {
-    title: "Tutor, Hekate Summer Camp (seasons 1 & 2)",
+    title: "Tutor, Hekate Summer Camp (Seasons 1 & 2)",
     org: "Hekate Academy",
     period: "Aug 2023, Aug 2024",
     detail: "Taught 10–15 students a week deep learning and computer vision (YOLO, R-CNN, OCR) plus machine learning basics.",
   },
   {
-    title: "Python tutor",
-    org: "Faculty of Electronics & Telecommunications, University of Science and Technology",
+    title: "Python Tutor",
+    org: "Faculty of Electronics and Telecommunication Engineering, University of Science and Technology",
     period: "Mar – Apr 2023",
     detail: "Tutored 20–25 engineering students a week in Python.",
   },
   {
     title: "Head of AI Expertise",
-    org: "PIONEER Student Research Club, Faculty of Electronics & Telecommunications",
+    org: "PIONEER Student Research Club, Faculty of Electronics and Telecommunication Engineering",
     period: "Jan 2022 – Nov 2024",
-    detail: "Trained members in AI and organised competitions; recognised for the club board's work in 2022–2023.",
+    detail: "Trained members in AI and organized competitions; recognized for the club board’s work in 2022–2023.",
   },
   {
-    title: "Technical tutor",
+    title: "Technical Tutor",
     org: "ROBODNIC 2022, robot contest for Da Nang high school students",
     period: "Aug 2022",
     detail: "Guided a team through Arduino, mechanical and electrical design.",
@@ -501,7 +501,7 @@ export const leadership: Role[] = [
     title: "Founder & President",
     org: "HHT Coder and Scientist, Hoang Hoa Tham High School",
     period: "Jan 2019 – May 2021",
-    detail: "Started and ran the school's science and technology club.",
+    detail: "Started and ran the school’s science and technology club.",
   },
 ];
 
@@ -509,7 +509,7 @@ export const certifications: string[] = [
   "TOEIC 880",
   "AI for Medical Diagnosis (DeepLearning.AI)",
   "Custom Models, Layers, and Loss Functions with TensorFlow",
-  "Python for Data Science",
+  "Python for Data Science, AI & Development",
   "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning",
 ];
 
