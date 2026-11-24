@@ -2,8 +2,10 @@
  * Everything the site says about Huyên lives here.
  *
  * Sources: the newest CV (Everfit, M.Sc. by Research, Oct 2026) first, then
+ * the LinkedIn profile for current role dates and the Hekate role history,
  * the older CVs in Documents/Career/CV/CV, the certificates in
- * Documents/Personal/hồ sơ thành tích, and the IEEE records of both papers.
+ * Documents/Personal/hồ sơ thành tích, the public GitHub repositories, and
+ * the IEEE records of both papers.
  * Deliberately left out: phone number, date of birth, ID card, transcripts
  * and certificate scans.
  */
@@ -47,7 +49,7 @@ export const experience: Experience[] = [
   {
     role: "AI Engineer",
     org: "Everfit",
-    period: "Sep 2025 – Sep 2026",
+    period: "Sep 2025 – Present",
     points: [
       "AI profile builder & AI interviewer: led end-to-end development of AI-generated seller profiles, from prompt engineering and internal tooling to the voice-interviewer API; ran field-level evaluations, optimized Instagram crawling and fixed critical pre-launch issues for seller onboarding.",
       "AI nutrition & food recognition: built evaluation and improvement pipelines for production AI, with analytics dashboards, synonym-to-canonical mapping and a multi-tier nutrition cascade; benchmarked 39 VLM configurations, designed the Gold-300 dataset, optimized a compact scan-type classifier and routed A/B tests with Statsig.",
@@ -68,7 +70,7 @@ export const experience: Experience[] = [
     tags: ["Quantum ML", "PennyLane", "Vision Transformers"],
   },
   {
-    role: "AI Engineer",
+    role: "AI Engineer, then Technical Manager",
     org: "Hekate",
     period: "Nov 2021 – Dec 2024",
     points: [
@@ -77,8 +79,12 @@ export const experience: Experience[] = [
       "MedNow: built a medical chatbot on SOLAR with RAG over ChromaDB; RAG raised answer accuracy by 20%.",
       "Milk advertisement violation detection (Alive & Thrive, UNICEF): led a team of 5 engineers covering Lao and Mongolian, reaching 93% accuracy and cutting processing time by 30%.",
       "Sumi: maintained and optimized an LLM chatbot, raising user engagement by 30%.",
+      "Technical Manager from Dec 2023: ran the company’s production systems, e-commerce platforms and conversational chatbots on Zalo and Facebook Business (Coca-Cola, SilkRoad, MessNow).",
+      "Owned system architecture on Google Cloud (Docker, CI/CD, Nginx) and led the migration of legacy systems with minimal downtime.",
+      "Built the MLOps workflow with MLflow, RabbitMQ, Apache Kafka, CI/CD and test-driven development, cutting model deployment time by 40%.",
+      "Brought LangChain into the company’s production LLM systems; earlier proofs of concept include an H.266/VVC 4K video encoder and license plate recognition with YOLOv8 and OCR.",
     ],
-    tags: ["PyTorch", "TensorFlow", "LLMs", "RAG", "AWS"],
+    tags: ["PyTorch", "TensorFlow", "LLMs", "RAG", "LangChain", "MLOps", "AWS", "Google Cloud"],
   },
 ];
 
@@ -405,6 +411,23 @@ export const projects: Project[] = [
       { label: "Code", href: "https://github.com/Tqhuyen/educational-platform-for-disabilities" },
     ],
   },
+  {
+    title: "Deep learning laboratory",
+    kind: "Personal",
+    period: "2026",
+    summary:
+      "A readable laboratory of deep learning primitives and paper replications: tokenization, attention, transformers, RNN/LSTM/GRU, with tiered training runs that work on a laptop.",
+    tags: ["PyTorch", "Transformers", "Paper replication"],
+    links: [{ label: "Code", href: "https://github.com/Tqhuyen/deep-learning-laboratory" }],
+  },
+  {
+    title: "Rift Report: League of Legends stats for friends",
+    kind: "Personal",
+    summary:
+      "A dashboard of ARAM statistics for a group of friends. It reads the local League client API and runs on the Python standard library alone: no Riot API key, no build step.",
+    tags: ["Python", "Dashboard", "Data analysis"],
+    links: [{ label: "Code", href: "https://github.com/Tqhuyen/rift-analysis" }],
+  },
 ];
 
 export type AwardYear = { year: number; items: string[] };
@@ -464,9 +487,17 @@ export const awards: AwardYear[] = [
   { year: 2016, items: ["Second Prize in Physics, district-level gifted student exam (grade 8)"] },
 ];
 
-export type Role = { title: string; org: string; period: string; detail: string };
+export type Role = { title: string; org: string; period: string; detail: string; link?: Link };
 
 export const leadership: Role[] = [
+  {
+    title: "Guest speaker: “Data & AI: where do I start?”",
+    org: "The University of Danang – University of Science and Technology",
+    period: "Nov 2026",
+    detail:
+      "A talk for first-year Data Science & AI students, built from a survey of 29 of them: an end-to-end data project on their own answers, five career roles with real use cases, and their 18 questions answered one by one.",
+    link: { label: "Slides (VI / EN)", href: "https://tqhuyen.github.io/data-ai-talk/" },
+  },
   {
     title: "Tutor, Hekate Summer Camp (Seasons 1 & 2)",
     org: "Hekate Academy",
@@ -511,6 +542,9 @@ export const certifications: string[] = [
   "Custom Models, Layers, and Loss Functions with TensorFlow",
   "Python for Data Science, AI & Development",
   "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning",
+  "MongoDB Basics (MongoDB University)",
+  "AWS Fundamentals: Building Serverless Applications",
+  "Data Science Summer School (VIASM)",
 ];
 
 export type SkillGroup = { title: string; items: string[] };
@@ -529,5 +563,9 @@ export const skills: SkillGroup[] = [
     title: "MLOps & cloud",
     items: ["AWS", "GCP", "Docker", "Kubernetes", "MLflow", "Weights & Biases", "CI/CD (Jenkins, GitLab)"],
   },
-  { title: "Data & backend", items: ["PostgreSQL", "MongoDB", "Redis", "FastAPI", "Apache Kafka"] },
+  { title: "Data & backend", items: ["PostgreSQL", "MongoDB", "Redis", "FastAPI", "Flask", "Apache Kafka", "RabbitMQ", "Nginx"] },
+  {
+    title: "Electronics & embedded",
+    items: ["Arduino", "STM32", "ESP32", "Raspberry Pi", "MSP430", "FPGA / Verilog", "Altium Designer", "Proteus"],
+  },
 ];

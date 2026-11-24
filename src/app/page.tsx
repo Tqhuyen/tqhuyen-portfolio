@@ -265,6 +265,14 @@ export default function Home() {
                 <h3>{r.title}</h3>
                 <p className="org">{r.org}</p>
                 <p>{r.detail}</p>
+                {r.link ? (
+                  <div className="links">
+                    <a href={r.link.href} target="_blank" rel="noreferrer">
+                      {r.link.label}
+                      <ArrowUpRight aria-hidden size={14} />
+                    </a>
+                  </div>
+                ) : null}
               </li>
             ))}
           </ul>
@@ -319,7 +327,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="container">
           <p>
-            © {profile.name} · Built with Next.js, hosted on Vercel
+            © {profile.name} · Built with Next.js
           </p>
         </div>
       </footer>

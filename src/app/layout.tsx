@@ -16,10 +16,12 @@ const mono = JetBrains_Mono({
   variable: "--font-mono",
 });
 
+// SITE_URL is set by the GitHub Pages build; Vercel builds use their production host.
 const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+const siteUrl = process.env.SITE_URL ?? (productionHost ? `https://${productionHost}` : "http://localhost:3000");
 
 export const metadata: Metadata = {
-  metadataBase: new URL(productionHost ? `https://${productionHost}` : "http://localhost:3000"),
+  metadataBase: new URL(siteUrl),
   title: `${profile.name} · ${profile.role}`,
   description:
     "AI research scientist and engineer from Vietnam: GenAI, computer vision and voice AI in production, quantum ML and medical imaging research. Projects, publications and awards.",

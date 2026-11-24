@@ -1,0 +1,48 @@
+name: Deploy to tqhuyen.github.io
+
+# Builds the static export and publishes it to the Tqhuyen/Tqhuyen.github.io
+# repository, which GitHub Pages serves at https://tqhuyen.github.io.
+# Vercel deploys the same commit to https://tqhuyen.vercel.app on its own.
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          STATIC_EXPORT: "1"
+          SITE_URL: https://tqhuyen.github.io
+      - name: Publish out/ to Tqhuyen/Tqhuyen.github.io
+        env:
+          DEPLOY_KEY: ${{ secrets.PAGES_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/pages_deploy
+          chmod 600 ~/.ssh/pages_deploy
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/pages_deploy -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new"
+          cd out
+          touch .nojekyll   # GitHub Pages skips folders starting with "_" (like _next) without this
+          git init -q -b main
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Deploy ${GITHUB_SHA::7} from tqhuyen-portfolio"
+          git push -f git@github.com:Tqhuyen/Tqhuyen.github.io.git main
