@@ -77,7 +77,7 @@ export const experience: Experience[] = [
       "R&D on computer vision, NLP, GenAI and LLMs (GPT, Llama, Qwen, Claude) to customer requirements.",
       "Cerebral artery disease classification: designed, trained and deployed cerebral artery segmentation and disease prediction models in PyTorch (85% accuracy).",
       "MedNow: built a medical chatbot on SOLAR with RAG over ChromaDB; RAG raised answer accuracy by 20%.",
-      "Milk advertisement violation detection (Alive & Thrive, UNICEF): led a team of 5 engineers covering Lao and Mongolian, reaching 93% accuracy and cutting processing time by 30%.",
+      "Milk advertisement violation detection (Alive & Thrive, UNICEF): led a team of 3 engineers covering Lao and Mongolian, reaching 93% accuracy and cutting processing time by 30%.",
       "Sumi: maintained and optimized an LLM chatbot, raising user engagement by 30%.",
       "Technical Manager from Dec 2023: ran the company’s production systems, e-commerce platforms and conversational chatbots on Zalo and Facebook Business (Coca-Cola, SilkRoad, MessNow).",
       "Owned system architecture on Google Cloud (Docker, CI/CD, Nginx) and led the migration of legacy systems with minimal downtime.",
@@ -312,7 +312,7 @@ export const projects: Project[] = [
     org: "Hekate",
     summary:
       "Finds milk ads that break the marketing rules for products for pregnant women and children under 24 months, across Facebook, Instagram and websites, in 5 countries.",
-    highlight: "Led 5 engineers · 93% accuracy",
+    highlight: "Led 3 engineers · 93% accuracy",
     tags: ["Object detection", "OCR", "LLMs", "Image captioning", "AWS EC2"],
     links: [],
   },
